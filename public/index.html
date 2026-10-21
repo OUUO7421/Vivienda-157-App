@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script>if(location.protocol==='file:')location.replace('./abrir.html');</script>
+  <meta name="description" content="Reconstrucción local del showroom Pocito Social Life. Recorré el masterplan, las plantas y las unidades.">
+  <meta name="theme-color" content="#164056">
+  <title>Pocito Social Life · Showroom local</title>
+  <link rel="stylesheet" href="/base.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main id="app" aria-label="Showroom Pocito Social Life">
+  <div id="scene"><div id="visual"><div id="media"></div><div id="hotspots"></div></div></div>
+  <div id="scene-loading" role="status"><span class="spinner"></span> Cargando escena</div>
+  <header class="toolbar">
+    <div class="left">
+      <button class="pill dark" data-action="menu" aria-label="Abrir menú de navegación"><span data-icon="menu"></span> Menú</button>
+      <button class="circle black" data-action="qr" aria-label="Ver código QR"><span data-icon="qr"></span></button>
+      <button class="circle black" id="back" data-action="back" aria-label="Volver"><span data-icon="back"></span></button>
+    </div>
+    <button id="search" class="pill dark" data-action="search" aria-expanded="false"><span data-icon="search"></span> Buscar unidades</button>
+    <div class="right"><button id="toggle" class="pill toggle" data-action="toggle"></button><button class="circle white" data-action="fullscreen" aria-label="Pantalla completa"><span data-icon="expand"></span></button></div>
+  </header>
+  <img id="proaco" alt="PROACO">
+  <div id="intro" hidden><img id="intro-logo" alt="Pocito Social Life"><button class="enter" data-action="enter">Ingresar</button></div>
+  <button id="hide-rail" class="circle white" data-action="rail" aria-label="Ocultar áreas"><span data-icon="eye"></span></button>
+  <nav id="rail" aria-label="Áreas y pisos"></nav>
+  <button class="circle dark previous" id="previous" data-action="prev" aria-label="Anterior"><span data-icon="left"></span></button>
+  <button class="circle dark next" id="next" data-action="next" aria-label="Siguiente"><span data-icon="right"></span></button>
+  <div id="caption"></div>
+  <div id="zoom"><button class="circle dark" id="zoom-in" data-action="zoomin" aria-label="Acercar"><span data-icon="plus"></span></button><button class="circle white" id="zoom-out" data-action="zoomout" aria-label="Alejar"><span data-icon="minus"></span></button><button class="reset-zoom" data-action="resetZoom" aria-label="Restablecer vista">1:1</button></div>
+  <div id="scene-footer"><button id="video-toggle" class="pill white" data-action="video" hidden>Pausar vídeo</button><span id="slide-count" aria-live="polite"></span></div>
+  <button id="whatsapp" class="circle dark" data-action="contact" aria-label="Contacto"><span data-icon="chat"></span></button>
+  <div id="content"></div><section id="detail" aria-label="Detalle de unidad"></section>
+</main>
+<div id="veil" hidden></div>
+<aside id="drawer" role="dialog" aria-modal="true" aria-label="Menú de navegación" hidden></aside>
+<section id="searchpanel" class="glass" role="dialog" aria-modal="true" aria-label="Buscar unidades" hidden></section>
+<dialog id="modal" aria-label="Información del showroom"></dialog>
+<section id="transition" hidden><video muted playsinline></video><button class="pill white" data-action="skip">Saltar introducción →</button></section>
+<div id="toast" role="status" hidden></div>
+<noscript>Este showroom requiere JavaScript. Activá JavaScript para navegar por los planos y unidades.</noscript>
+<script type="module" src="/src/app.js"></script>
+</body>
+</html>

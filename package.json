@@ -1,0 +1,19 @@
+{
+  "name": "pocito-showroom-local",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Reconstrucción local del showroom de Pocito con datos públicos capturados el 19/10/2026.",
+  "scripts": {
+    "dev": "node scripts/server.mjs",
+    "start": "node scripts/server.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "verify:server": "node scripts/verify-server.mjs",
+    "prepare:data": "node scripts/prepare-data.mjs",
+    "download:assets": "node scripts/download-assets.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
