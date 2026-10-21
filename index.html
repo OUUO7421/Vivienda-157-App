@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Réplica de estudio de la ventana interactiva Pocito Social Life, con informe de diseño e interacciones observadas."><title>Pocito · Réplica interactiva</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<main id="app">
+ <div id="scene"><div id="visual"><img id="backdrop" src="assets/masterplan.jpg" alt="Vista del conjunto Pocito Social Life"><div id="hotspots"></div></div></div>
+ <header class="toolbar"><div class="left"><button class="pill dark" data-action="menu" aria-label="Abrir menú de navegación"><span class="icon">☰</span> Menú</button><button class="circle black" data-action="qr" aria-label="Ver código QR">▦</button><button class="circle black" id="back" data-action="back" aria-label="Volver">↶</button></div><button id="search" class="pill dark" data-action="search">⌕ &nbsp; Buscar unidades</button><div class="right"><button id="toggle" class="pill toggle" data-action="toggle"></button><button class="circle white" data-action="fullscreen" aria-label="Pantalla completa">⛶</button></div></header>
+ <img id="proaco" src="assets/proaco.png" alt="PROACO">
+ <div id="intro"><img src="assets/logo.png" alt="Pocito Social Life"><button class="enter" data-action="enter">Ingresar</button></div>
+ <nav id="rail" aria-label="Áreas y pisos"></nav>
+ <button class="circle dark previous" id="previous" data-action="prev" aria-label="Anterior">‹</button><button class="circle dark next" id="next" data-action="next" aria-label="Siguiente">›</button>
+ <div id="caption"></div><div id="zoom"><button class="circle dark" data-action="zoomin" aria-label="Acercar">⊕</button><button class="circle white" data-action="zoomout" aria-label="Alejar">⊖</button></div>
+ <button id="whatsapp" class="circle dark" data-action="contact" aria-label="Contacto">☏</button>
+ <footer class="study"><span>Réplica de estudio · 17/10/2026</span><button data-action="report">Detalles de la ventana ↗</button><button data-action="live">Original en vivo ↗</button></footer>
+ <div id="content"></div><div id="detail"></div>
+</main>
+<div id="veil" hidden></div><aside id="drawer" aria-label="Menú de navegación" hidden></aside>
+<section id="searchpanel" class="glass" aria-label="Buscar unidades" hidden></section>
+<dialog id="modal"></dialog>
+<section id="liveview" hidden><header><button class="pill dark" data-action="closeLive">← Volver a la réplica</button><strong>Showroom original · contenido externo en vivo</strong><a id="liveLink" target="_blank" rel="noopener">Abrir en pestaña ↗</a></header><iframe title="Showroom original Pocito" allow="fullscreen" allowfullscreen></iframe></section>
+<div id="toast" role="status" hidden></div>
+<script src="app.js"></script></body></html>
